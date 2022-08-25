@@ -17,7 +17,7 @@ export const inputKeyword = (keyword: string) => {
 };
 
 export const searchKeyword = (): ThunkAction<void, RootState, undefined, RootActions> => async (dispatch: Dispatch) => {
-  const result: any = await wikipedia.get(`${store.getState().keyword}`).then(res => res).catch(err => {
+  const result = await wikipedia.get(`${store.getState().keyword}`).then(res => res).catch(err => {
     if (axios.isAxiosError(err)) {
       console.log('axiosError');
     }

@@ -12,7 +12,7 @@ function App() {
     <>
       <CssBaseline />
       <div className="App">
-        <Container maxWidth="lg">
+        <Container maxWidth="lg" style={{padding:0}}>
           <Header />
           <Board />
           <InputArea />
